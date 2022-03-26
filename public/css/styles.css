@@ -1,0 +1,112 @@
+:root {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  /* Primary */
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  /* Neutral */
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+  /* Typography */
+  /*  Body Copy */
+  --Font-size-quote: 28px;
+  /* - Weights: 800 */
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  background-color: var(--Dark-Blue);
+  color: var(--Light-Cyan);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+main {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+h2 {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--Neon-Green);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+blockquote {
+  position: relative;
+  margin: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: var(--Font-size-quote);
+}
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
+.pattern-divider {
+  height: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background: url("./../assets/images/pattern-divider-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--Neon-Green);
+  transform: translateY(60%);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+button:hover {
+  box-shadow: 0 0 1em 0.25em var(--Neon-Green),
+    inset 0 0 0.75em 0.25em var(--Neon-Green);
+}
+.loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20vw;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--Neon-Green);
+  text-shadow: 0 0 5px var(--Neon-Green), 0 0 10px var(--Neon-Green),
+    0 0 20px var(--Neon-Green), 0 0 40px var(--Neon-Green),
+    0 0 80px var(--Neon-Green), 0 0 90px var(--Neon-Green),
+    0 0 100px var(--Neon-Green), 0 0 150px var(--Neon-Green);
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: 60%;
+  }
+  .pattern-divider {
+    background: url("./../assets/images/pattern-divider-desktop.svg");
+    background-position: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    width: 30%;
+  }
+}
